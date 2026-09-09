@@ -81,14 +81,14 @@ section{padding:48px 0}
 .pack ul{list-style:none}
 .pack li{display:flex;gap:10px;font-size:14px;padding:11px 0;border-bottom:1px solid #322c25}
 .pack li:last-child{border-bottom:0}
-.bwrap{display:grid;gap:14px;grid-template-columns:1fr;margin-top:22px}
-.bc{border:1px solid var(--line);border-radius:var(--r);background:var(--card);overflow:hidden}
-.bc .cv{padding:20px 18px;color:#fff}
-.bc .cv .n{font:700 10px/1 "Poppins",monospace;letter-spacing:.14em;opacity:.85}
-.bc .cv .tt{font:700 18px/1.15 "Poppins";margin-top:8px}
-.bc .bd{padding:16px 18px}.bc .bd p{font-size:13px;color:var(--soft)}
-.bc .tg{display:inline-block;margin-top:12px;font:700 10.5px/1 "Poppins",monospace;background:var(--sagebg);color:var(--sage);border:1px solid var(--line);padding:6px 10px;border-radius:6px;letter-spacing:.06em}
-.cv1{background:var(--sage)}.cv2{background:var(--att)}.cv3{background:#3C556B}.cv4{background:var(--soft)}
+.bwrap2{display:grid;gap:16px;grid-template-columns:1fr;margin-top:26px}.bx{position:relative;display:flex;flex-direction:column;background:var(--alt);border-radius:14px;padding:16px}.bx .tag{position:absolute;top:14px;right:14px;background:#F1C34B;color:#1B1A17;font:700 10px/1 "Poppins";text-transform:uppercase;letter-spacing:.06em;padding:6px 10px;border-radius:999px}.bx img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:9px;background:#fff;display:block}.bx h3{font:700 16.5px/1.25 "Poppins";color:var(--ink);margin:16px 0 8px}.bx p{font:700 13px/1.5 "Poppins";color:var(--ink);flex:1;margin:0}.bx .val{align-self:flex-start;margin-top:16px;background:var(--ink);color:#fff;font:700 12px/1 "Poppins";letter-spacing:.03em;padding:11px 15px;border-radius:999px}.bx .val s{color:rgba(255,255,255,.5);font-weight:400}
+
+
+
+
+
+
+
 .proof{display:grid;gap:14px;grid-template-columns:1fr;margin-top:22px}
 .proof .p{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
 .proof .p .h{display:flex;align-items:center;gap:8px;font:700 14px/1 "Poppins"}
@@ -153,9 +153,9 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 .modal .sv{font-family:"Poppins",monospace;font-size:12px;color:var(--succ)}
 .modal .kp{display:block;width:100%;text-align:center;margin-top:10px;background:none;border:0;font:700 12.5px/1 "Poppins";color:var(--soft);text-decoration:underline;cursor:pointer;padding:8px}
 .modal .cl{position:absolute;top:12px;right:16px;background:none;border:0;font-size:24px;color:#fff;cursor:pointer;line-height:1}
-@media(min-width:760px){section{padding:64px 0}.mats{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.mat{flex:none}.possui,.plans,.steps{grid-template-columns:1fr 1fr}.fy,.proof{grid-template-columns:1fr 1fr 1fr}.bwrap{grid-template-columns:1fr 1fr}.hero{max-width:680px;margin:0 auto;text-align:center;padding:48px 0 56px}.hero .pr{margin:26px auto 24px;max-width:520px}.hero .lede{margin-left:auto;margin-right:auto}.hero .hck{display:inline-grid;text-align:left}}
+@media(min-width:760px){section{padding:64px 0}.mats{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.mat{flex:none}.possui,.plans,.steps{grid-template-columns:1fr 1fr}.fy,.proof{grid-template-columns:1fr 1fr 1fr}.bwrap2{grid-template-columns:repeat(4,1fr)}.hero{max-width:680px;margin:0 auto;text-align:center;padding:48px 0 56px}.hero .pr{margin:26px auto 24px;max-width:520px}.hero .lede{margin-left:auto;margin-right:auto}.hero .hck{display:inline-grid;text-align:left}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
-.pr img{border-radius:6px;width:100%}.mat img{border-radius:4px;aspect-ratio:1055/1491;object-fit:cover;width:100%}.bc .cv.ph{padding:0;aspect-ratio:1/1;overflow:hidden}.bc .cv.ph img{width:100%;height:100%;object-fit:cover;display:block}.pmk{margin:18px auto 16px;border-radius:10px;width:100%;max-width:420px;height:auto}.plmk{border-radius:8px;width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:14px}
+.pr img{border-radius:6px;width:100%}.mat img{border-radius:4px;aspect-ratio:1055/1491;object-fit:cover;width:100%}.pmk{margin:18px auto 16px;border-radius:10px;width:100%;max-width:420px;height:auto}.plmk{border-radius:8px;width:100%;aspect-ratio:1/1;object-fit:cover;margin-bottom:14px}
 </style></head><body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -249,11 +249,11 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 <div class="cut m"></div>
 <p class="bsub">Você também vai receber…</p>
 <div class="c"><span class="bbadge">🎁 4 bônus exclusivos</span></div>
-<div class="bwrap">
-<div class="bc"><div class="cv cv1 ph"><img src="/img/b1.webp" alt="Guia Visual de Franjas" width="420" height="420" decoding="async" loading="lazy"></div><div class="bd"><p>Reta, cortina, francesa, lateral, desfiada, longa — profundidade, ângulo e "como não deixar curta demais".</p><span class="tg">incluído no plano Completo</span></div></div>
-<div class="bc"><div class="cv cv2 ph"><img src="/img/b2.webp" alt="Mapa dos Erros Mais Comuns" width="420" height="420" decoding="async" loading="lazy"></div><div class="bd"><p>Base torta, lados diferentes, degrau, peso demais: sintoma → causa → correção → como prevenir.</p><span class="tg">incluído no plano Completo</span></div></div>
-<div class="bc"><div class="cv cv3"><div class="n">BÔNUS 03</div><div class="tt">Mapa "Qual Tesoura Usar?"</div></div><div class="bd"><p>Reta, desbaste, fio navalha, navalha: o efeito de cada uma e quando NÃO usar. Tabela efeito → ferramenta.</p><span class="tg">incluído no plano Completo</span></div></div>
-<div class="bc"><div class="cv cv4 ph"><img src="/img/b3.webp" alt="Mapa das Camadas sem Marcação" width="420" height="420" decoding="async" loading="lazy"></div><div class="bd"><p>Conectar camadas sem degrau, face-framing e como corrigir uma camada que já ficou marcada.</p><span class="tg">incluído no plano Completo</span></div></div>
+<div class="bwrap2">
+<div class="bx"><span class="tag">Bônus #1</span><img src="/img/bo1.webp" alt="Guia Visual de Franjas" width="560" height="560" loading="lazy" decoding="async"><h3>Bônus 1 — Guia Visual de Franjas</h3><p>Um guia específico para ajudar a profissional a cortar e adaptar os principais tipos de franja.</p><span class="val">Valor: <s>R$27</s> GRÁTIS</span></div>
+<div class="bx"><span class="tag">Bônus #2</span><img src="/img/bo2.webp" alt="Mapa dos Erros Mais Comuns no Corte" width="560" height="560" loading="lazy" decoding="async"><h3>Bônus 2 — Mapa dos Erros Mais Comuns no Corte</h3><p>Um material visual para reconhecer problemas, identificar possíveis causas e entender como evitá-los.</p><span class="val">Valor: <s>R$27</s> GRÁTIS</span></div>
+<div class="bx"><span class="tag">Bônus #3</span><img src="/img/bo3.webp" alt="Mapa "Qual Tesoura Usar?"" width="560" height="560" loading="lazy" decoding="async"><h3>Bônus 3 — Mapa "Qual Tesoura Usar?"</h3><p>Um guia rápido sobre as principais ferramentas utilizadas no corte e o efeito produzido por cada uma.</p><span class="val">Valor: <s>R$27</s> GRÁTIS</span></div>
+<div class="bx"><span class="tag">Bônus #4</span><img src="/img/bo4.webp" alt="Mapa das Camadas sem Marcação" width="560" height="560" loading="lazy" decoding="async"><h3>Bônus 4 — Mapa das Camadas sem Marcação</h3><p>Um guia visual voltado para construção de camadas leves, conectadas e equilibradas.</p><span class="val">Valor: <s>R$27</s> GRÁTIS</span></div>
 </div></div></section>
 
 <section class="alt"><div class="wrap">
