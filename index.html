@@ -406,6 +406,7 @@ document.getElementById('upNo').addEventListener('click',function(){c();location
 document.getElementById('upClose').addEventListener('click',c);
 M.addEventListener('click',function(e){if(e.target===M)c()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList.contains('open'))c()});
+(function(){var m=document.querySelector('.mats');if(!m)return;var mm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)');if(mm&&mm.matches)return;var cs=m.querySelectorAll('.mat');if(cs.length<2)return;var paused=false,rt;function sc(){return m.scrollWidth>m.clientWidth+4}function step(){if(paused||!sc())return;if(m.scrollLeft+m.clientWidth>=m.scrollWidth-8){m.scrollTo({left:0,behavior:'smooth'})}else{m.scrollBy({left:cs[0].getBoundingClientRect().width+14,behavior:'smooth'})}}setInterval(step,3800);function pz(){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false},5000)}['pointerdown','touchstart','wheel','mouseenter','focusin'].forEach(function(ev){m.addEventListener(ev,pz,{passive:true})});})();
 })();
 </script>
 <script>
