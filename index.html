@@ -52,7 +52,7 @@ section{padding:48px 0}
 .pr figcaption{margin-top:6px;font:700 10px/1.4 "Poppins",monospace;color:var(--soft);text-align:center}
 .pr svg{margin:14px auto 0}
 .alt{background:var(--alt)}
-.mats{display:flex;gap:14px;margin-top:22px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}.mats::-webkit-scrollbar{display:none}
+.mats{display:flex;gap:14px;margin-top:22px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}.mats::-webkit-scrollbar{display:none}
 .mat{flex:0 0 87%;scroll-snap-align:center;border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:12px;text-align:center}
 .mat .cp{font:700 11px/1.3 "Poppins",monospace;color:var(--soft);letter-spacing:.05em;margin-top:6px}
 .possui{list-style:none;display:grid;gap:12px;margin-top:22px}
@@ -400,7 +400,7 @@ document.getElementById('upNo').addEventListener('click',function(){c();location
 document.getElementById('upClose').addEventListener('click',c);
 M.addEventListener('click',function(e){if(e.target===M)c()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList.contains('open'))c()});
-(function(){var m=document.querySelector('.mats');if(!m)return;var mm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)');if(mm&&mm.matches)return;var cs=m.querySelectorAll('.mat');if(cs.length<2)return;var paused=false,rt;function sc(){return m.scrollWidth>m.clientWidth+4}function step(){if(paused||document.hidden||!sc())return;if(m.scrollLeft+m.clientWidth>=m.scrollWidth-8){m.scrollTo({left:0,behavior:'smooth'})}else{m.scrollBy({left:cs[0].getBoundingClientRect().width+14,behavior:'smooth'})}}setInterval(step,3800);function pz(){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false},5000)}['pointerdown','touchstart','wheel','mouseenter','focusin'].forEach(function(ev){m.addEventListener(ev,pz,{passive:true})});})();
+(function(){var m=document.querySelector('.mats');if(!m)return;var mm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)');if(mm&&mm.matches)return;var cs=m.querySelectorAll('.mat');if(cs.length<2)return;var paused=false,rt,auto=false,at;function sc(){return m.scrollWidth>m.clientWidth+4}function hold(ms){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false},ms)}function step(){if(paused||document.hidden||!sc())return;auto=true;clearTimeout(at);at=setTimeout(function(){auto=false},700);if(m.scrollLeft+m.clientWidth>=m.scrollWidth-8){m.scrollTo({left:0,behavior:'smooth'})}else{m.scrollBy({left:cs[0].getBoundingClientRect().width+14,behavior:'smooth'})}}setInterval(step,3800);['pointerdown','touchstart','wheel','keydown','focusin','mouseenter'].forEach(function(ev){m.addEventListener(ev,function(){hold(6000)},{passive:true})});m.addEventListener('scroll',function(){if(auto)return;hold(2500)},{passive:true});})();
 })();
 </script>
 <script>
