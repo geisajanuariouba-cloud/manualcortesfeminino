@@ -29,8 +29,8 @@ section{padding:48px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--btn);color:#fff;font:700 15px/1 "Poppins";text-transform:uppercase;letter-spacing:.03em;text-decoration:none;cursor:pointer;padding:17px 26px;border:0;border-radius:var(--r);min-height:54px;width:100%;max-width:440px;box-shadow:0 2px 0 var(--btnd);animation:pl 2s ease-in-out infinite;transition:background .15s,transform .1s}
 .btn:hover{background:var(--btnd)}.btn:active{transform:translateY(2px)}
 .btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.btn.g{background:transparent;color:var(--btnd);border:1.5px solid var(--btn);box-shadow:none}
-.btn.g:hover{background:var(--btn);color:#fff}
+.btn.g{box-shadow:0 2px 0 var(--btnd)}
+
 .btn.w{max-width:none}
 @keyframes pl{0%,100%{box-shadow:0 2px 0 var(--btnd),0 0 0 0 rgba(51,192,107,.50)}50%{box-shadow:0 2px 0 var(--btnd),0 0 20px 5px rgba(51,192,107,.55)}}
 .note{display:block;margin-top:10px;font:700 12.5px/1.5 "Poppins",monospace;color:var(--soft)}
