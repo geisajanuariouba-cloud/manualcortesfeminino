@@ -419,9 +419,13 @@ var C={basico:"https://checkout.wiven.com.br/checkout/cmtsp4cow0kz201ptxg0djwy8?
 var M=document.getElementById('upsell');
 function o(){M.classList.add('open');M.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
 function c(){M.classList.remove('open');M.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-document.querySelectorAll('[data-plan]').forEach(function(b){b.addEventListener('click',function(){b.dataset.plan==='completo'?location.href=C.completo:o()})});
-document.getElementById('upYes').addEventListener('click',function(e){e.preventDefault();location.href=C.pop});
-document.getElementById('upNo').addEventListener('click',function(){c();location.href=C.basico});
+function withUTM(u){try{var keep=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','src','sck','xcod'];
+var cur=new URLSearchParams(location.search);var extra=new URLSearchParams();
+keep.forEach(function(k){var v=cur.get(k);if(!v){try{v=localStorage.getItem(k)}catch(e){}}if(v)extra.set(k,v)});
+var es=extra.toString();return es?(u+(u.indexOf('?')>-1?'&':'?')+es):u}catch(e){return u}}
+document.querySelectorAll('[data-plan]').forEach(function(b){b.addEventListener('click',function(){b.dataset.plan==='completo'?location.href=withUTM(C.completo):o()})});
+document.getElementById('upYes').addEventListener('click',function(e){e.preventDefault();location.href=withUTM(C.pop)});
+document.getElementById('upNo').addEventListener('click',function(){c();location.href=withUTM(C.basico)});
 document.getElementById('upClose').addEventListener('click',c);
 M.addEventListener('click',function(e){if(e.target===M)c()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList.contains('open'))c()});
