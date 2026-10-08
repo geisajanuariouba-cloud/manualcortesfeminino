@@ -246,15 +246,33 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 
 
 <section id="planos"><div class="wrap c">
-<h2 class="sh m c">Leve o mapa completo</h2>
-<p class="soft c" style="max-width:56ch;margin:12px auto 0;font-size:16px">+150 mapas e os 4 bônus, em um único pagamento.</p>
+<h2 class="sh m c">Escolha seu plano</h2>
 <div class="cut m"></div>
-<div class="plans" style="max-width:440px;margin:0 auto">
+<div class="plans">
+<div class="plan">
+<div class="ptit">Plano Básico</div>
+<img class="plmk" src="/img/plan-b.webp" alt="Plano Básico — Mapa Visual dos Cortes Femininos" width="520" height="520" loading="lazy" decoding="async">
+<div class="prc">Você recebe:</div>
+<ul>
+<li><svg class="i ick"><use href="#ck"/></svg> Fundamentos rápidos do corte</li>
+<li><svg class="i ick"><use href="#ck"/></svg> Bases e formatos femininos</li>
+<li><svg class="i ick"><use href="#ck"/></svg> Mapas de cortes curtos</li>
+<li><svg class="i ick"><use href="#ck"/></svg> Mapas de cortes médios</li>
+<li><svg class="i ick"><use href="#ck"/></svg> Mapas de cortes longos</li>
+<li><svg class="i ick"><use href="#ck"/></svg> Cortes com textura e movimento</li>
+</ul>
+<div class="price">
+<div class="old">de <s>R$67</s> por <span class="off">85% OFF</span></div>
+<div class="big">R$ 10</div>
+<div class="save">● Você economiza R$ 57,00</div>
+</div>
+<button class="btn g" data-plan="basico">Quero o plano Básico</button>
+</div>
 <div class="plan hot">
 <span class="bg">⚡ Mais vendido</span>
 <div class="ptit">Plano Completo</div>
 <img class="plmk" src="/img/plan-c.webp" alt="Plano Completo — kit com e-book, pranchas e 4 bônus" width="560" height="560" loading="lazy" decoding="async">
-<div class="tudo">Os 150+ mapas + os 4 bônus</div>
+<div class="tudo">Tudo do Básico + os 4 bônus</div>
 <div class="prc">Você recebe:</div>
 <ul>
 <li><svg class="i ick"><use href="#ck"/></svg> Fundamentos rápidos do corte</li>
@@ -269,14 +287,15 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 <li class="b"><svg class="i ick"><use href="#ck"/></svg> 🎁 Bônus 4 — Mapa das Camadas sem Marcação</li>
 </ul>
 <div class="price">
-<div class="old">de <s>R$145</s> por <span class="off">68% OFF</span></div>
-<div class="big">R$ 47</div>
-<div class="save">● Você economiza R$ 98,00</div>
+<div class="old">de <s>R$145</s> por <span class="off">80% OFF</span></div>
+<div class="big">R$ 27,90</div>
+<div class="save">● Você economiza R$ 117,10</div>
 </div>
-<button class="btn" data-plan="completo">Quero o mapa completo</button>
+<button class="btn" data-plan="completo">Quero o plano Completo</button>
 <div class="pb2">🔒 Compra segura · Pix</div>
 </div>
 </div>
+<p class="reb">👇 a maioria leva o Completo pelos 4 bônus</p>
 <div class="call"><svg class="i ick"><use href="#ck"/></svg> Um único corte da cliente que você não recusa já faz o investimento valer a pena.</div>
 </div></section>
 
@@ -315,7 +334,7 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 <details><summary>Serve para cabelo cacheado, crespo ou com progressiva?</summary><p>Cada mapa traz um bloco "adapte por textura" com o que muda em liso, ondulado, cacheado e crespo — incluindo encolhimento. O plano Completo ainda tem o mapa de camadas sem marcação, útil em cabelo com química.</p></details>
 <details><summary>Como e em que formato eu recebo?</summary><p>Material digital em PDF, pensado para consultar no celular na bancada — também abre no computador e no tablet, e dá para imprimir. O link chega por e-mail e por WhatsApp logo após o pagamento.</p></details>
 <details><summary>E se não for para mim?</summary><p>Você tem 7 dias para pedir o reembolso, sem precisar justificar.</p></details>
-<details><summary>Os bônus estão incluídos?</summary><p>Sim. Os 4 mapas de apoio (franjas, erros e simetria, tesoura e camadas sem marcação) vêm junto com o mapa completo.</p></details>
+<details><summary>Os bônus estão no plano Básico?</summary><p>Não. Os 4 mapas de apoio (franjas, erros e simetria, tesoura e camadas sem marcação) são exclusivos do plano Completo.</p></details>
 </div></section>
 
 <section class="fin2"><div class="wrap">
@@ -326,6 +345,16 @@ footer .fl{color:var(--onink);font-weight:700;letter-spacing:.06em;margin-bottom
 
 </main>
 
+
+<div class="modal" id="upsell" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="upT">
+<div class="b"><div class="sp"></div><button class="cl" id="upClose" aria-label="Fechar">&times;</button>
+<div class="in">
+<h3 id="upT">Antes de finalizar: leve o Completo por +R$7,90.</h3>
+<p class="pt">O Básico te dá o corte. O Completo te dá também a conferência de simetria, o guia de franjas, a tesoura certa e a camada sem degrau.</p>
+<div class="nm"><span class="ol">de R$145</span><span class="pl">R$17,90</span><span class="to">+R$7,90 sobre o Básico</span><span class="sv">−87% · economiza R$10 vs os R$27,90 da página</span></div>
+<a class="btn w" id="upYes" href="#">Quero o Completo por R$17,90</a>
+<button class="kp" id="upNo">Continuar só com o Básico (R$10)</button>
+</div></div></div>
 
 <div class="modal" id="imgzoom" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Ampliar imagem"><div class="b iz"><button class="cl" id="izClose" aria-label="Fechar">&times;</button><img id="izImg" src="" alt="" loading="eager"></div></div>
 
@@ -338,11 +367,19 @@ var em=document.getElementById('tmin'),es=document.getElementById('tsec');
 function t(){var l=Math.max(0,end-Date.now()),m=Math.floor(l/6e4),s=Math.floor(l%6e4/1e3);if(em)em.textContent=String(m).padStart(2,'0');if(es)es.textContent=String(s).padStart(2,'0')}
 t();setInterval(t,1e3);
 var C={basico:"https://checkout.wiven.com.br/checkout/cmtsp4cow0kz201ptxg0djwy8?offer=RRP0ES9",completo:"https://checkout.wiven.com.br/checkout/cmtss7dzh0np301pxhmih3d1y?offer=au6wv3f",pop:"https://checkout.wiven.com.br/checkout/cmtss7dzh0np301pxhmih3d1y?offer=5EVHRWN"};
+var M=document.getElementById('upsell');
+function o(){M.classList.add('open');M.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+function c(){M.classList.remove('open');M.setAttribute('aria-hidden','true');document.body.style.overflow=''}
 function withUTM(u){try{var keep=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid','src','sck','xcod'];
 var cur=new URLSearchParams(location.search);var extra=new URLSearchParams();
 keep.forEach(function(k){var v=cur.get(k);if(!v){try{v=localStorage.getItem(k)}catch(e){}}if(v)extra.set(k,v)});
 var es=extra.toString();return es?(u+(u.indexOf('?')>-1?'&':'?')+es):u}catch(e){return u}}
-document.querySelectorAll('[data-plan]').forEach(function(b){b.addEventListener('click',function(){location.href=withUTM(C.completo)})});
+document.querySelectorAll('[data-plan]').forEach(function(b){b.addEventListener('click',function(){b.dataset.plan==='completo'?location.href=withUTM(C.completo):o()})});
+document.getElementById('upYes').addEventListener('click',function(e){e.preventDefault();location.href=withUTM(C.pop)});
+document.getElementById('upNo').addEventListener('click',function(){c();location.href=withUTM(C.basico)});
+document.getElementById('upClose').addEventListener('click',c);
+M.addEventListener('click',function(e){if(e.target===M)c()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&M.classList.contains('open'))c()});
 (function(){var g=document.querySelectorAll('.mats img[data-src]');if(!g.length)return;function load(im){if(im.dataset.srcset)im.srcset=im.dataset.srcset;im.src=im.dataset.src;im.removeAttribute('data-src');im.removeAttribute('data-srcset')}if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load(e.target);io.unobserve(e.target)}})},{rootMargin:'300px 0px'});g.forEach(function(im){io.observe(im)})}else{g.forEach(load)}})();(function(){var mm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)');if(mm&&mm.matches)return;function initLoop(id,cId,pId,nId){var m=document.getElementById(id);if(!m)return;var ol=m.querySelector('.pv-slides');var base=Array.prototype.slice.call(ol.children);var N=base.length;base.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');ol.appendChild(k)});var setW=0,step=0,speed=0.9,paused=false,rt,last=0,lastSet=0,pos=0,drag=null;var cnt=document.getElementById(cId),bp=document.getElementById(pId),bn=document.getElementById(nId);function measure(){step=base[1].offsetLeft-base[0].offsetLeft;setW=ol.children[N].offsetLeft-base[0].offsetLeft;}function hold(ms){paused=true;clearTimeout(rt);rt=setTimeout(function(){paused=false},ms);}function idx(){var i=Math.round(pos/step)%N;return i<0?i+N:i;}function label(){if(cnt)cnt.textContent=(idx()+1)+' / '+N;}function setPos(v){pos=v;if(setW>0){while(pos>=setW)pos-=setW;while(pos<0)pos+=setW;}m.scrollLeft=pos;lastSet=m.scrollLeft;label();}function go(d){hold(3000);var from=pos;var to=(Math.round(pos/step)+d)*step;var t0=performance.now();function ease(ts){var k=Math.min((ts-t0)/380,1);k=1-Math.pow(1-k,3);setPos(from+(to-from)*k);if(k<1)requestAnimationFrame(ease);}requestAnimationFrame(ease);}if(bp)bp.addEventListener('click',function(){go(-1)});if(bn)bn.addEventListener('click',function(){go(1)});function tick(ts){if(!last)last=ts;var dt=Math.min(ts-last,50);last=ts;if(!paused&&!document.hidden&&setW>0){setPos(pos+speed*dt/16.67);}requestAnimationFrame(tick);}m.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&e.button!==0)return;drag={x:e.clientX,s:pos};m.classList.add('is-dragging');hold(2000);});window.addEventListener('pointermove',function(e){if(!drag)return;setPos(drag.s-(e.clientX-drag.x));});window.addEventListener('pointerup',function(){if(!drag)return;drag=null;m.classList.remove('is-dragging');});m.addEventListener('touchstart',function(){hold(2000)},{passive:true});m.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){go(1)}if(e.key==='ArrowLeft'){go(-1)}});m.addEventListener('scroll',function(){if(Math.abs(m.scrollLeft-lastSet)>1.5){pos=m.scrollLeft;hold(2500);label();}},{passive:true});window.addEventListener('resize',function(){measure();setPos(pos)});window.addEventListener('load',function(){measure();setPos(pos)});measure();label();requestAnimationFrame(tick);}initLoop('matsLoop','pvCount','pvPrev','pvNext');initLoop('proofLoop','prfCount','prfPrev','prfNext');})();(function(){var lb=document.getElementById('imgzoom'),lbImg=lb&&document.getElementById('izImg');if(!lb||!lbImg)return;function bestSrc(img){var ss=img.getAttribute('data-srcset')||img.getAttribute('srcset');if(ss){var parts=ss.split(',').map(function(s){return s.trim().split(/\s+/)});parts.sort(function(a,b){return (parseInt(a[1])||0)-(parseInt(b[1])||0)});return parts[parts.length-1][0]}return img.getAttribute('data-src')||img.currentSrc||img.src}function openIz(img){lbImg.src=bestSrc(img);lbImg.alt=img.alt||'';lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}function closeIz(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';lbImg.src=''}document.querySelectorAll('.mat img').forEach(function(im){im.style.cursor='zoom-in';im.addEventListener('click',function(){openIz(im)})});document.getElementById('izClose').addEventListener('click',closeIz);lb.addEventListener('click',function(e){if(e.target===lb)closeIz()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))closeIz()});})();
 })();
 </script>
